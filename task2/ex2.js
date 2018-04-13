@@ -3,6 +3,8 @@
 
 // For example if you input 'The Quick Brown Fox' the outputString should be 'tHE qUICK bROWN fOX'
 
+console.log("____________task2_______________________");
+
 function invertCase(incomeSting){
   let outputString = '';
   for (let i = 0 ; i < incomeSting.length; i++){

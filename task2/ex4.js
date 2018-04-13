@@ -1,3 +1,6 @@
+'use strict'
+console.log("____________task4_______________________");
+
 function primeNumber(lastNumber){
   let arr=[];
     nextPrime:
