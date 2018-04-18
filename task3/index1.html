@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+    
+    var Vehicle = {
+      constructor: function (brand, model, condition){
+        var brand;
+        this.brand = brand;
+        this.model = model;
+        this.condition = condition;
+        return this;
+      },
+      drive: () => {
+        console.log("I'm " + this.condition + " " + this.brand + " " + this.model +" and i ride on the road");
+      }
+    }
+
+    var SportCar = Object.create(Vehicle);
+    SportCar.constructor = function (brand, model, condition, maxSpeed) {
+      Vehicle.constructor.apply(this, arguments);
+      this.maxSpeed = maxSpeed || "неизвестной";
+      return this;
+      };
+    SportCar.rideOnMaxSpeed = function(){
+      Vehicle.drive() + console.log(" with " + this.maxSpeed + " km/h max speed");
+    }
+
+    var ZhiguliDeda = Object.create(SportCar).constructor('VAZ', '2110', 'old', '220');
+    console.log(ZhiguliDeda.rideOnMaxSpeed());
+    
+	</script>
+</body>
+</html>

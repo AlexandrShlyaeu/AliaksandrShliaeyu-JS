@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+    function Vehicle(brand, model, condition) {
+      this.brand = brand;
+      this.model = model;
+      this.condition = condition;
+    }
+    Vehicle.prototype.drive = function(){
+        return "I'm " + this.condition + " " + this.brand + " " + this.model +" and i ride on the road";
+        }
+
+
+    function SportCar(brand, model, condition, maxSpeed){
+      Vehicle.call(this, brand, model, condition);
+      this.maxSpeed = maxSpeed || " ";
+      this.maxSpeedRide = function() {
+        console.log(this.drive() + " with " + this.maxSpeed + " km/h max speed" );
+      }
+    }
+    SportCar.prototype = Object.create(Vehicle.prototype);
+    
+    var ZhiguliDeda = new SportCar('VAZ', '2110', 'old', '220');
+    ZhiguliDeda.drive();
+    ZhiguliDeda.maxSpeedRide();
+
+    var lambo = new SportCar('lamborgini', 'Diablo', 'new', '250');
+    lambo.drive();
+    lambo.maxSpeedRide();
+	</script>
+</body>
+</html>
