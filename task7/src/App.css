@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.td-wrapper{
+  margin: 20px auto; 
+  width: 500px;
+  min-height: 600px;
+  border: 5px solid rgba(70, 200, 250, 1.0);
+  padding: 20px;
+}
+
