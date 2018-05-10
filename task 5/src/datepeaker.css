@@ -1,0 +1,97 @@
+.sh-datepeaker *, .sh-datepeaker *:before, .sh-datepeaker *:after {
+  box-sizing: border-box;
+}
+
+.sh-datepeaker {
+  background-color:#fff;
+  border-radius: 0;
+  border: solid 1px #e7e9ed;
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  width: 500px;
+}
+
+.sh-datepeaker .sh-datepeaker-btn {
+  -webkit-appearance: button;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  min-width: 27px;
+  outline: none;
+  overflow: visible;
+  padding: 0;
+  text-align: center;}
+
+.sh-datepeaker .sh-datepeaker-btn:active {
+    border-radius: 0;
+    box-shadow: 0 0 0 2px rgba(#10989E, 0.1)
+}
+
+.sh-datepeaker .sh-datepeaker-header {
+  align-items: center;
+  display: flex;
+  padding: 1.2rem 1.4rem;
+}
+
+.sh-datepeaker .sh-datepeaker-header svg {
+  fill: #10989E;
+}
+
+.sh-datepeaker .sh-datepeaker-header__label {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.sh-datepeaker .sh-datepeaker-week {
+  background-color: #E7E9ED;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sh-datepeaker .sh-datepeaker-week span {
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 14.28%;
+  padding: 1.2rem 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sh-datepeaker .sh-datepeaker-body {
+  background-color: rgba(#E7E9ED, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sh-datepeaker .sh-datepeaker-date {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  max-width: 14.28%;
+  padding: 1.2rem 0;
+}
+
+.sh-datepeaker .sh-datepeaker-date--active {
+  cursor: pointer;
+}
+
+.sh-datepeaker .sh-datepeaker-date--today {
+  background-color: #10989E;
+  color: #fff;
+}
+
+.sh-datepeaker .sh-datepeaker-date--selected {
+  background-color: rgb(97, 230, 137);
+  color: #333;
+}
