@@ -17,7 +17,7 @@ render() {
       <button
         className="td-removeTodo"
         onClick={(e) => this.removeTodo(this.props.id)}>
-          Удалить
+          X
       </button>
       {this.props.todo.text}
     </div>
