@@ -73,7 +73,7 @@
 .sh-datepeaker .sh-datepeaker-date {
   align-items: center;
   background-color: #fff;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 0;
   display: flex;
   flex-direction: column;

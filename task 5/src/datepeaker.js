@@ -88,7 +88,6 @@ var datepeaker = {
     if (this.date.toString() === this.todaysDate.toString()) {
       newDay.classList.add('sh-datepeaker-date--today')
     }
-    
     newDay.appendChild(dateEl)
     month.appendChild(newDay)
   },
