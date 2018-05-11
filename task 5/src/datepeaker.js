@@ -6,10 +6,41 @@ var datepeaker = {
   activeDates: null,
   date: new Date(),
   todaysDate: new Date(),
+
+  renderHtml: function (){
+    var html =   document.querySelector(".sh-datepeaker");
+    var html_header = 
+    ("<div class='sh-datepeaker-header'>" +
+                "<button class='sh-datepeaker-btn' data-calendar-toggle='previous'>" +
+                  "<svg height='24' version='1.1' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'>"+
+                    "<path d='M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z'></path>"+
+                  "</svg>" +
+                "</button>"+
+            "<div class='sh-datepeaker-header__label' data-calendar-label='month'>"+
+              "Месяц"+
+            "</div>"+
+              "<button class='sh-datepeaker-btn' data-calendar-toggle='next'>" +
+                "<svg height='24' version='1.1' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'>"+
+                  "<path d='M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z'></path>"+
+                "</svg>"+
+              "</button></div>" +
+            "<div class='sh-datepeaker-week'>"+
+                "<span>Пн</span>"+
+                "<span>Вт</span>"+
+                "<span>Ср</span>"+
+                "<span>Чт</span>"+
+                "<span>Пт</span>"+
+                "<span>Сб</span>"+
+                "<span>Вс</span>"+
+            "</div>"+
+            "<div class='sh-datepeaker-body' data-calendar-area='month'></div>"+
+              "</div>")
+      return html.innerHTML = html_header},
   
   
   init: function (options) {
     this.options = options
+    this.renderHtml()
     this.date.setDate(1)
     this.createMonth()
     this.createListeners()
