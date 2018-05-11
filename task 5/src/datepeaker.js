@@ -17,15 +17,17 @@ var datepeaker = {
 
 
   createListeners: function () {
+    var next = document.querySelectorAll('[data-calendar-toggle="next"]')[0]
+    var previous = document.querySelectorAll('[data-calendar-toggle="previous"]')[0]
     var _this = this
-    this.next.addEventListener('click', function () {
+    next.addEventListener('click', function () {
       _this.clearCalendar()
       var nextMonth = _this.date.getMonth() + 1
       _this.date.setMonth(nextMonth)
       _this.createMonth()
     })
     // Clears the calendar and shows the previous month
-    this.previous.addEventListener('click', function () {
+    previous.addEventListener('click', function () {
       _this.clearCalendar()
       var prevMonth = _this.date.getMonth() - 1
       _this.date.setMonth(prevMonth)
@@ -91,8 +93,7 @@ var datepeaker = {
     this.date.setMonth(this.date.getMonth() - 1)
 
     var label = document.querySelectorAll('[data-calendar-label="month"]')[0]
-    debugger
-    this.label.innerHTML =
+    label.innerHTML =
       this.monthsAsString(this.date.getMonth()) + ' ' + this.date.getFullYear()
     this.dateClicked()
   },
@@ -115,7 +116,8 @@ var datepeaker = {
   },
 
   clearCalendar: function () {
-    datepeaker.month.innerHTML = ''
+    var month = document.querySelectorAll('[data-calendar-area="month"]')[0]
+    month.innerHTML = ''
   },
 
   removeActiveClass: function () {
