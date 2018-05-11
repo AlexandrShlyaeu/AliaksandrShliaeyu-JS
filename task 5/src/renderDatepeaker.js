@@ -18,13 +18,13 @@ var render = {
               "</svg>"+
             "</button></div>" +
           "<div class='sh-datepeaker-week'>"+
-              "<span>Mon</span>"+
-              "<span>Tue</span>"+
-              "<span>Wed</span>"+
-              "<span>Thu</span>"+
-              "<span>Fri</span>"+
-              "<span>Sat</span>"+
-              "<span>Sun</span>"+
+              "<span>Пн</span>"+
+              "<span>Вт</span>"+
+              "<span>Ср</span>"+
+              "<span>Чт</span>"+
+              "<span>Пт</span>"+
+              "<span>Сб</span>"+
+              "<span>Вс</span>"+
           "</div>"+
           "<div class='sh-datepeaker-body' data-calendar-area='month'></div>"+
             "</div>")

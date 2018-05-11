@@ -9,7 +9,6 @@ var datepeaker = {
   
   
   init: function (options) {
-    // this.html.innerHTML = datepeaker.renderHtml();
     this.options = options
     this.date.setDate(1)
     this.createMonth()
@@ -36,6 +35,7 @@ var datepeaker = {
 
 
   createDay: function (num, day, year) {
+    var month = document.querySelectorAll('[data-calendar-area="month"]')[0]
     var newDay = document.createElement('div')
     var dateEl = document.createElement('span')
     dateEl.innerHTML = num
@@ -55,9 +55,9 @@ var datepeaker = {
     if (this.date.toString() === this.todaysDate.toString()) {
       newDay.classList.add('sh-datepeaker-date--today')
     }
-    debugger
+    
     newDay.appendChild(dateEl)
-    this.month.appendChild(newDay)
+    month.appendChild(newDay)
   },
 
   dateClicked: function () {
@@ -90,6 +90,8 @@ var datepeaker = {
     this.date.setDate(1)
     this.date.setMonth(this.date.getMonth() - 1)
 
+    var label = document.querySelectorAll('[data-calendar-label="month"]')[0]
+    debugger
     this.label.innerHTML =
       this.monthsAsString(this.date.getMonth()) + ' ' + this.date.getFullYear()
     this.dateClicked()
