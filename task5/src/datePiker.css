@@ -32,7 +32,9 @@
     text-align: center;
     padding: 5px;
 }
+
 .piker__monthButton{
+  color: #10989E;
   background: none;
   border: 0;
   color: inherit;
@@ -66,10 +68,10 @@
   cursor: pointer;
 }
 .piker__today{
-  background-color: #f17ecf ;
+  background-color: #10989E ;
 }
 .piker__day_picked{
-  background-color: #d0e946 ;
+  background-color: rgb(202, 205, 212) ;
 }
 
 .piker__week{
