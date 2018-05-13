@@ -1,0 +1,79 @@
+.piker__wrapper{
+  background-color: #fff;
+  border-radius: 0;
+  border: solid 1px #e7e9ed;
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.piker__weekDaysNames{
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  background-color: #E7E9ED;
+}
+
+.piker__weekDaysItem{
+  min-width: 20px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.piker__monthRow{
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+}
+.piker__monthLabel{
+    flex: 2 1 auto;
+    min-width: 20px;
+    text-align: center;
+    padding: 5px;
+}
+.piker__monthButton{
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  min-width: 27px;
+  outline: none;
+  overflow: visible;
+  padding: 0;
+  text-align: center;}
+
+.piker__monthButton:active {
+    border-radius: 0;
+    box-shadow: 0 0 0 2px rgba(#10989E, 0.1)
+}
+
+
+.datePiker-header{
+  width: 210px;
+  
+}
+
+.piker__day{
+  /* flex: 1 1 auto; */
+  min-width: 20px;
+  text-align: center;
+  padding: 5px;
+  outline: 1px solid black;
+  outline-offset: -3px;
+  cursor: pointer;
+}
+.piker__today{
+  background-color: #f17ecf ;
+}
+.piker__day_picked{
+  background-color: #d0e946 ;
+}
+
+.piker__week{
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
