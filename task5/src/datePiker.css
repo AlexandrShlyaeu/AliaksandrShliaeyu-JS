@@ -8,6 +8,17 @@
   width: 100%;
 }
 
+.datePiker-output{
+width: 100%;
+border: none;
+border-bottom: 2px solid #555;
+text-align: center;
+margin-top: 30px;
+}
+.datePiker-output:focus {
+  border: 2px solid #555;
+}
+
 .piker__weekDaysNames{
   display: flex;
   width: 100%;
@@ -55,7 +66,6 @@
 
 .datePiker-header{
   width: 210px;
-  
 }
 
 .piker__day{

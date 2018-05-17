@@ -1,11 +1,12 @@
-function DatePicker(selector) {
-  var args = document.querySelectorAll(selector);
+function DatePicker(inputSelector, outputSelector) {
+  var args = document.querySelectorAll(inputSelector, outputSelector);
     (function checkInputs() {
         if (args.length === 0) {
             return;}
     })();
 
-  this.selector = selector;
+  this.inputSelector = inputSelector;
+  this.outputSelector = outputSelector;
   var nowDate = new Date();
   var currentDay = nowDate.getDate();
   var currentMonth = nowDate.getMonth();
@@ -17,7 +18,15 @@ function DatePicker(selector) {
 
   var pikerWrapper = document.createElement("div");
       pikerWrapper.className = "piker__wrapper";
-      document.querySelector(selector).appendChild(pikerWrapper);
+      document.querySelector("."+inputSelector).appendChild(pikerWrapper);
+
+  var pikerOutput = document.createElement("input");
+  pikerOutput.className = outputSelector;
+  pikerOutput.setAttribute("type", "text");
+  pikerOutput.setAttribute("name", "outputDate");
+
+
+      document.querySelector("."+inputSelector).appendChild(pikerOutput);
 
   createMonthRow(currentYear, currentMonth);
   createWeekNameRow();

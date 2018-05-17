@@ -13,13 +13,11 @@
     </div>
     <br>
 
-    <input type="text" name="outputDate" value="">
-
   <script src="src/datePiker.js"></script>
   <script src="src/view.js"></script>
   <script>
   window.addEventListener('load', function () {
-    const datePicker = new DatePicker(".datePiker-header");
+    const datePicker = new DatePicker("datePiker-header", "datePiker-output");
   })
   </script>
 
